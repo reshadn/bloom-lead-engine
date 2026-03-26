@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Lead Engine | Live Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .bloom-gradient { background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%); }
+    </style>
+</head>
+<body class="bloom-gradient min-h-screen p-8">
+    <div class="max-w-7xl mx-auto">
+        <header class="flex justify-between items-center mb-12">
+            <div>
+                <h1 class="text-4xl font-extrabold text-pink-900 tracking-tight">Bloom Lead Engine</h1>
+                <p class="text-pink-700 font-medium">Live Prospecting Pipeline & Agent Assignment Dashboard</p>
+            </div>
+            <div class="text-right">
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-800 font-bold text-sm">
+                    <span class="animate-pulse w-2 h-2 rounded-full bg-green-500 mr-2"></span>
+                    SYNC ACTIVE: Lofty CRM
+                </div>
+                <p class="text-xs text-pink-600 mt-1">Updated: 3/25/2026, 10:29:33 PM</p>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-pink-500">
+                <p class="text-pink-600 text-xs font-bold uppercase mb-1">Total Pipeline</p>
+                <p class="text-3xl font-black text-gray-900">$842M+</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+                <p class="text-green-600 text-xs font-bold uppercase mb-1">Active Leads</p>
+                <p class="text-3xl font-black text-gray-900">23</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                <p class="text-blue-600 text-xs font-bold uppercase mb-1">Avg. Quality</p>
+                <p class="text-3xl font-black text-gray-900">81%</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-purple-500">
+                <p class="text-purple-600 text-xs font-bold uppercase mb-1">Assigned</p>
+                <p class="text-3xl font-black text-gray-900">2</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead class="bg-gray-50 text-gray-500 uppercase text-xs font-bold">
+                        <tr>
+                            <th class="px-6 py-4">Source</th>
+                            <th class="px-6 py-4">Lead Detail</th>
+                            <th class="px-6 py-4">Price / Info</th>
+                            <th class="px-6 py-4">Status</th>
+                            <th class="px-6 py-4 text-center">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Danville Coming Soon</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">Diablo Ranch Estates, Danville, CA</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                N/A
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    Coming Soon (Spring 2026)
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 95%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">95%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Danville Price Reduced</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">1271 Camino Tassajara, Danville, CA 94526</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                $1,400,000 (Estimate based on $200k cut)
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    Price Reduced (Cut $200k)
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 94%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">94%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Lafayette FSBO</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">6</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                ,900,000
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    FSBO / Owner Carry Possible
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 92%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">92%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Walnut Creek FSBO</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">1989 Meadow Rd</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                N/A
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    NEW
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 91%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">91%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Danville Price Reduced</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">5013 Kerry Hl, Danville, CA 94506</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                N/A
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    Price Reduced
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 90%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">90%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Orinda FSBO</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">6 Lucille Way</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                ,425,000
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    NEW
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 89%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">89%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Orinda FSBO</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">6 Lucille Way, Orinda, CA 94563</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                $1,425,000 (price cut $25K on 1/18)
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    New
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 88%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">88%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Lafayette Coming Soon</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">Custom Home Demo Phase</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                N/A
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    Coming Soon / Construction Underway
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 87%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">87%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="bg-gray-50 opacity-60 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Walnut Creek FSBO</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Dallas Elliott (ASSIGNED) (ASSIGNED)</p>
+                                <p class="text-xs text-gray-500">1989 Meadow Rd, Walnut Creek, CA 94595</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                N/A
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-gray-200 text-gray-700">
+                                    ASSIGNED
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">85%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="bg-gray-50 opacity-60 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Walnut Creek FSBO</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Dallas Elliott (ASSIGNED) (ASSIGNED)</p>
+                                <p class="text-xs text-gray-500">1989 Meadow Rd</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                N/A
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-gray-200 text-gray-700">
+                                    ASSIGNED
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">85%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Pleasant Hill Price Reduced</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">69 Fordham Ct</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                ,000 (Reduced)
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    NEW
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">85%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Alamo FSBO</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">Luxury Condo / Townhome</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                N/A
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    FSBO
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 84%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">84%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Berkeley Hills Price Reduced</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">Luxury Listing</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                ~.6M+
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    Price Reduced
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 83%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">83%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Walnut Creek FSBO Condo</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">Downtown Walnut Creek, CA 94596</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                ,000
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    New
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 82%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">82%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Oakley Price Reduced</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">780 Dimock St, Oakley, CA 94561</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                N/A
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    Price Reduced
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 82%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">82%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Walnut Creek FSBO</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">Downtown Condo</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                ,000
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    NEW
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 80%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">80%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Oakley Price Reduced</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">912 Rhine Way, Oakley, CA 94561</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                $599,000
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    Price Reduced (Under $600k)
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 79%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">79%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Concord FSBO Condo</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">Concord Location</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                ,000
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    New
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 78%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">78%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Concord FSBO</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">Remodeled Condo</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                ,000
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    NEW
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 78%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">78%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Concord FSBO — Corporate Owner</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">2332 Saint George Dr, Concord, CA 94520</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                N/A
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    New — Owner ID Pending
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 72%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">72%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Lafayette Residential Lot</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">6+/</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                ,900,000
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    New
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 70%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">70%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Richmond Multifamily</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">1405 Merced St</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                $1,850,000 | 55 days on market | 5.8% cap rate
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    NEW
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 60%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">60%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-pink-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-bold uppercase">Richmond Vacant Land</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <p class="font-bold text-gray-900">Unknown</p>
+                                <p class="text-xs text-gray-500">357 Western Dr</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-bold text-gray-700">
+                                $599,000 | 31 days | Shovel-ready w/ approved plans
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-2 py-1 rounded-full text-xs font-bold uppercase bg-green-100 text-green-700">
+                                    NEW
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-24 bg-gray-200 rounded-full h-1.5 mb-1">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 45%"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pink-600">45%</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
